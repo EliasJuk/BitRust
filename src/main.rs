@@ -61,7 +61,7 @@ fn main() {
 
 		// Processar a escolha do usuário
 		match choice {
-			1 => println!("Opção 1"),
+			1 => routes::ask_for_private_key_and_generate_wif(),
 			2 => println!("Opção 2"),
 			3 => println!("Opção 3"),
 			4 => println!("Opção 4"),
