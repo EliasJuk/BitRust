@@ -8,6 +8,12 @@ mod utils {
 	pub mod utils;
 }
 
+mod functions{
+	pub mod wif_generate;
+}
+
+mod routes;
+
 fn main() {
 	loop {
 		// Limpar a tela e exibir o menu
@@ -21,7 +27,7 @@ fn main() {
 		println!("{}","╚═══════════════════════════════╝".bold().truecolor(190, 60, 190));
 		println!();
 		println!("-------------------------------------------");
-		println!(" 1 - Opção 1 ");
+		println!(" 1 - CONVERT PRIVATE KEY TO WIF");
 		println!(" 2 - Opção 2 ");
 		println!(" 3 - Opção 3 ");
 		println!("-------------------------------------------");
@@ -38,7 +44,7 @@ fn main() {
 
 		// Solicitar a escolha do usuário
 		print!("Escolha uma opção: ");
-		io::stdout().flush().unwrap();
+		io::stdout().flush().unwrap(); // Forçar o flush para garantir que a mensagem apareça
 		
 
 		let mut choice = String::new();
