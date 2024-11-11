@@ -1,6 +1,7 @@
 // src/main.rs
 
 use std::io;
+use colored::*;
 
 mod utils {
 	pub mod utils;
@@ -11,12 +12,12 @@ fn main() {
 		// Limpar a tela e exibir o menu
 		utils::utils::clear_console();
 
-		println!("╔═══════════════════════════════╗");
-		println!("║                               ║");
-		println!("║           BIT RUST            ║");
-		println!("║             v0.1              ║");
-		println!("║                               ║");
-		println!("╚═══════════════════════════════╝");
+		println!("{}","╔═══════════════════════════════╗".bold().truecolor(190, 60, 190));
+		println!("{}","║                               ║".bold().truecolor(190, 60, 190));
+    println!("{}", format!("║           {}            ║", "BIT RUST".blue().bold()).truecolor(190, 60, 190));
+    println!("{}", format!("║             {}              ║", "v0.1".yellow().bold()).truecolor(190, 60, 190));
+		println!("{}","║                               ║".bold().truecolor(190, 60, 190));
+		println!("{}","╚═══════════════════════════════╝".bold().truecolor(190, 60, 190));
 		println!();
 		println!("-------------------------------------------");
 		println!(" 1 - Opção 1 ");
