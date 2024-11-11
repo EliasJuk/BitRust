@@ -1,6 +1,7 @@
 // src/main.rs
 
 use std::io;
+use std::io::Write;
 use colored::*;
 
 mod utils {
@@ -37,6 +38,7 @@ fn main() {
 
 		// Solicitar a escolha do usuário
 		print!("Escolha uma opção: ");
+		io::stdout().flush().unwrap();
 		
 
 		let mut choice = String::new();
