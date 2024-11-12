@@ -1,7 +1,7 @@
 // src/routes.rs
 
 use crate::utils::utils;
-use crate::modules::wif_generate;
+use crate::modules::{wif_generate, private_to_public_key};
 
 use std::io;
 use std::io::Write;
@@ -29,6 +29,36 @@ pub fn generate_wif() {
 		}
 		Err(e) => {
 			println!("\nErro: {}", e);
+		}
+	}
+
+	utils::pause_until_enter();
+}
+
+pub fn generate_public_key() {
+	utils::clear_console();
+
+	// Perguntar pela chave privada    
+	println!("Example: c875d4c6b3a2b9db1449be3a3a58d8feadfdf0be49792d7b9e79bde47bafccdb");
+	print!("\nDigite a chave privada: ");
+	io::stdout().flush().unwrap(); // Forçar o flush para garantir que a mensagem apareça
+
+	let mut private_key_hex = String::new();
+	io::stdin()
+		.read_line(&mut private_key_hex)
+		.expect("Falha ao ler a chave privada");
+
+	let private_key_hex = private_key_hex.trim();
+
+	// Chama a função para gerar a chave pública comprimida
+	match private_to_public_key::private_to_public_key(private_key_hex) {
+		Ok(public_key) => {
+			// Imprimi a chave pública comprimida em formato hexadecimal
+			println!("\nChave pública comprimida: {}", format!("{:?}", public_key).blue());
+			println!("Chave pública comprimida (hex): {}", hex::encode(public_key).yellow().bold());
+		}
+		Err(e) => {
+			println!("Erro: {}", e);
 		}
 	}
 
