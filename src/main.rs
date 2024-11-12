@@ -12,6 +12,7 @@ mod modules {
 	pub mod wif_generate;
 	pub mod desafio_info;
 	pub mod private_to_public_key;
+	pub mod address_generate;
 }
 
 mod data {
@@ -35,7 +36,7 @@ fn main() {
 		println!("-------------------------------------------");
 		println!(" 1 - CONVERT PRIVATE KEY TO WIF");
 		println!(" 2 - GENERATE PUBLIC KEY");
-		println!(" 3 -  ");
+		println!(" 3 - GENERATE BTC ADDRESS");
 		println!("-------------------------------------------");
 		println!(" 4 -  ");
 		println!(" 5 -  ");
@@ -69,7 +70,7 @@ fn main() {
 		match choice {
 			1 => menu_task::generate_wif(),
 			2 => menu_task::generate_public_key(),
-			3 => println!("Opção 3"),
+			3 => menu_task::generate_address(),
 			4 => println!("Opção 4"),
 			5 => println!("Opção 5"),
 			7 => modules::desafio_info::desafio_info(),
