@@ -21,6 +21,7 @@ src/
 │   └── wif_generate.rs
 │   └── desafio_info.rs
 │   └── private_to_public_key.rs
+│   └── address_generate.rs
 │
 ├── utils/
 │   └── utils.rs
