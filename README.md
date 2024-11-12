@@ -17,7 +17,7 @@ src/
 ├── data/                  
 │   └── ranges.rs           
 │
-├── functions/             
+├── modules/             
 │   └── wif_generate.rs
 │   └── desafio_info.rs
 │   └── private_to_public_key.rs
@@ -25,4 +25,10 @@ src/
 │
 ├── utils/
 │   └── utils.rs
+│
+├── .gitignore
+├── Cargo.toml
+├── LICENSE
+├── README.md
+├── screenshot.png
 ```
