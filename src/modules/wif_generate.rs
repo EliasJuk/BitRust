@@ -1,4 +1,4 @@
-// src/functions/wif_generate.rs
+// src/modules/wif_generate.rs
 
 use hex::decode;
 use sha2::{Digest, Sha256};
