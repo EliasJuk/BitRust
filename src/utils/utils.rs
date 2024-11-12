@@ -3,6 +3,9 @@
 use std::io::{self, Write};
 use num_bigint::BigUint;
 use num_traits::One;
+use std::fs::OpenOptions;
+use std::env;
+
 
 /// Função para limpar a tela do terminal
 pub fn clear_console() {
@@ -60,4 +63,28 @@ pub fn hex_to_bigint(hex: &str) -> Result<BigUint, String> {
 	} else {
 		Err("A string contém caracteres não hexadecimais.".to_string())
 	}
+}
+
+/// Função para salvar o resultado no arquivo resultado.txt
+pub fn salvar_resultado(endereco: &str, chave_privada: &str) {
+	// Obtem o diretório do executável
+	let exe_dir = env::current_exe()
+		.expect("Falha ao obter o diretório do executável")
+		.parent()  // Obtém o diretório pai
+		.expect("Falha ao obter o diretório pai do executável")
+		.to_path_buf();
+	
+	// Concatena o nome do arquivo com o diretório do executável
+	let arquivo_path = exe_dir.join("resultado.txt");
+	
+	// Abre o arquivo (cria se não existir, apende caso já exista)
+	let mut file = OpenOptions::new()
+		.create(true)
+		.append(true)
+		.open(arquivo_path)
+		.expect("Não foi possível abrir o arquivo");
+	
+	// Escreve no arquivo
+	writeln!(file, "Endereço encontrado: {}, Chave Privada: {}", endereco, chave_privada)
+		.expect("Falha ao escrever no arquivo");
 }
