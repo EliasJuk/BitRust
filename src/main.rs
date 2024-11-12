@@ -10,6 +10,11 @@ mod utils {
 
 mod modules {
 	pub mod wif_generate;
+	pub mod desafio_info;
+}
+
+mod data {
+	pub mod ranges;
 }
 
 mod menu_task;
@@ -35,7 +40,7 @@ fn main() {
 		println!(" 5 - Opção 5 ");
 		println!(" 6 - Opção 6 ");
 		println!("-------------------------------------------");
-		println!(" 7 - Opção 7 ");
+		println!(" 7 - DESAFIO INFO");
 		println!(" 8 - Opção 8 ");
 		println!(" 9 - Opção 9 ");
 		println!("-------------------------------------------");
@@ -66,6 +71,7 @@ fn main() {
 			3 => println!("Opção 3"),
 			4 => println!("Opção 4"),
 			5 => println!("Opção 5"),
+			7 => modules::desafio_info::desafio_info(),
 			0 => {
 				println!("Saindo...");
 				break;
