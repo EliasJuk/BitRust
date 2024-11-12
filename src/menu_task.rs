@@ -1,7 +1,7 @@
 // src/menu_task.rs
 
 use crate::utils::utils;
-use crate::modules::{wif_generate, private_to_public_key, address_generate};
+use crate::modules::{wif_generate, private_to_public_key, address_generate, puzzle_wallet};
 
 use std::io;
 use std::io::Write;
@@ -90,4 +90,9 @@ pub fn generate_address() {
 	}
 
 	utils::pause_until_enter();
+}
+
+pub fn puzzle_wallet_challenge(){
+	utils::clear_console();
+	puzzle_wallet::puzzle_wallet();
 }
