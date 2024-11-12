@@ -13,6 +13,7 @@ mod modules {
 	pub mod desafio_info;
 	pub mod private_to_public_key;
 	pub mod address_generate;
+	pub mod puzzle_wallet;
 }
 
 mod data {
@@ -71,7 +72,7 @@ fn main() {
 			1 => menu_task::generate_wif(),
 			2 => menu_task::generate_public_key(),
 			3 => menu_task::generate_address(),
-			4 => println!("Opção 4"),
+			4 => menu_task::puzzle_wallet_challenge(),
 			5 => println!("Opção 5"),
 			7 => modules::desafio_info::desafio_info(),
 			0 => {
