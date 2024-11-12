@@ -1,13 +1,13 @@
 // src/routes.rs
 
 use crate::utils::utils;
-use crate::functions::wif_generate;
+use crate::modules::wif_generate;
 
 use std::io;
 use std::io::Write;
 use colored::*;
 
-pub fn ask_for_private_key_and_generate_wif() {
+pub fn generate_wif() {
 	// Limpar a tela e exibir o menu
 	utils::clear_console();
 	println!("Example: b3d8c534b0d494ccda1b4dcc47cdc0aa701e39f89c326035f73558e590163dcb");

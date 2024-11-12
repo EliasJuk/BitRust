@@ -8,11 +8,11 @@ mod utils {
 	pub mod utils;
 }
 
-mod functions{
+mod modules {
 	pub mod wif_generate;
 }
 
-mod routes;
+mod menu_task;
 
 fn main() {
 	loop {
@@ -61,7 +61,7 @@ fn main() {
 
 		// Processar a escolha do usuário
 		match choice {
-			1 => routes::ask_for_private_key_and_generate_wif(),
+			1 => menu_task::generate_wif(),
 			2 => println!("Opção 2"),
 			3 => println!("Opção 3"),
 			4 => println!("Opção 4"),
