@@ -12,13 +12,15 @@ Bitcoin Puzzle Wallets
 ```
 src/
 ├── main.rs               
-├── routes.rs              
+├── menu_task.rs              
 │
 ├── data/                  
 │   └── ranges.rs           
 │
 ├── functions/             
 │   └── wif_generate.rs
+│   └── desafio_info.rs
+│   └── private_to_public_key.rs
 │
 ├── utils/
 │   └── utils.rs
