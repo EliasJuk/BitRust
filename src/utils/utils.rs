@@ -4,7 +4,6 @@ use std::io::{self, Write};
 use num_bigint::BigUint;
 use num_traits::One;
 
-
 /// Função para limpar a tela do terminal
 pub fn clear_console() {
 	print!("\x1b[2J\x1b[1;1H");
