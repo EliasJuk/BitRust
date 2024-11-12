@@ -39,7 +39,7 @@ fn main() {
 		println!(" 2 - GENERATE PUBLIC KEY");
 		println!(" 3 - GENERATE BTC ADDRESS");
 		println!("-------------------------------------------");
-		println!(" 4 -  ");
+		println!("{}"," 4 - PUZZLE WALLET".bold().yellow());
 		println!(" 5 -  ");
 		println!(" 6 -  ");
 		println!("-------------------------------------------");
