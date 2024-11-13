@@ -40,12 +40,11 @@ fn main() {
 		println!(" 3 - GENERATE BTC ADDRESS");
 		println!("-------------------------------------------");
 		println!("{}"," 4 - PUZZLE WALLET".bold().yellow());
-		println!(" 5 -  ");
 		println!(" 6 -  ");
 		println!("-------------------------------------------");
 		println!(" 7 - DESAFIO INFO");
 		println!(" 8 -  ");
-		println!(" 9 -  ");
+		println!("{}"," 9 - DONATE".green());
 		println!("-------------------------------------------");
 		println!(" 0 - EXIT");
 		println!("-------------------------------------------");
@@ -73,8 +72,9 @@ fn main() {
 			2 => menu_task::generate_public_key(),
 			3 => menu_task::generate_address(),
 			4 => menu_task::puzzle_wallet_challenge(),
-			5 => println!("Opção 5"),
+			5 => println!(""),
 			7 => modules::desafio_info::desafio_info(),
+			9 => menu_task::donate(),
 			0 => {
 				println!("Saindo...");
 				break;
