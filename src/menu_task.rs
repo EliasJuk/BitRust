@@ -96,3 +96,12 @@ pub fn puzzle_wallet_challenge(){
 	utils::clear_console();
 	puzzle_wallet::puzzle_wallet();
 }
+
+pub fn donate(){
+	utils::clear_console();
+	println!("{}","DONATE BTC: bc1qsck9w2x3hkmvjx86dkh94kv4jclx039rj9vd4n".yellow());
+	println!("{}","DONATE ETH: 0xb9e0ef47726a05E15f5258572F91B94E618a84F9".green());
+	println!("{}","DONATE SOL: 2DcgVYuVqtMZQUSeQiMAx5nQ7RJeuLcL6vM6md2znuVE".magenta());
+
+	utils::pause_until_enter();
+}
