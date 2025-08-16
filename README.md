@@ -9,6 +9,27 @@ Bitcoin Puzzle Wallets
 
 <br/>
 
+## How to Use
+
+### Build and Run the Project
+
+1. Open a terminal and navigate to your project folder.
+
+2. To compile and run the project, execute the following command:
+
+### Build and Run
+
+```bash
+  # Windows
+   ./build_and_run.bat
+
+  #Linux
+  chmod +x build-and-run.sh
+  ./build-and-run.sh
+```
+
+---
+
 ```
 src/
 ├── main.rs               
