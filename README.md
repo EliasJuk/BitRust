@@ -7,6 +7,12 @@ Bitcoin Puzzle Wallets
   <img src="screenshot.png" alt="bithunter"/>
 </p>
 
+<p align="center">
+  <img src="assets/bitrust.gif" alt="demo" width="600"/>
+</p>
+
+
+
 <br/>
 
 ## How to Use
