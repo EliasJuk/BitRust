@@ -35,7 +35,14 @@ pub fn puzzle_wallet() {
 			println!("EndHex: {}", desafio.2);
 			println!("PublicKey: {}", desafio.3);
 			println!("Address: {}", desafio.4);
-			println!("Status: {}", desafio.5);
+
+			// Exibe o status com cor
+			let status_text = match desafio.5.to_lowercase().as_str() { 
+				"solved" => "Solved".green().bold(),
+				"unsolved" => "Unsolved".red().bold(),
+				_ => desafio.5.normal(),
+			};
+			println!("Status: {}", status_text);
 
 			// Calcular o número de combinações no intervalo
 			match calcular_combinacoes(desafio.1, desafio.2) {
