@@ -26,12 +26,21 @@ Bitcoin Puzzle Wallets
 ### Build and Run
 
 ```bash
-  # Windows
+  #Windows
    ./build_and_run.bat
 
   #Linux
+
+  #Execute este comando para instalar o GCC e todas as ferramentas essenciais de build:
+  sudo apt update
+  sudo apt install build-essential
+
+  #Instalar o rustc
+  sudo snap install rustup --classic
+
+  #buildar o projeto
   chmod +x build-and-run.sh
-  ./build-and-run.sh
+  ./build_and_run.sh
 ```
 
 ---
